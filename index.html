@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> LAKSHMI'S PORTFOLIO</title>
+    <link rel="icon" type="image/x-icon" href="/portfolio_18526737.png">
+<style>
+    .profile-img:hover {
+        transform: scale(1.05) rotate(2deg);
+        filter: drop-shadow(0 15px 30px rgba(59, 130, 246, 0.6));
+    }
+
+    @media (max-width: 1024px) {
+  
+        #home > div {
+            flex-direction: column;
+            padding: 0 20px;
+        }
+        
+        #home .flex.justify-center.m-5 {
+            padding-right: 0;
+            margin-top: 100px;
+        }
+        
+        #home .text-3xl {
+            padding: 20px;
+            text-align: center;
+        }
+ 
+        #about .pt-11 {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+ 
+        #skills h1 {
+            margin-left: 20px;
+        }
+        
+        #skills .w-16 {
+            margin-left: 20px;
+        }
+        
+
+        #project .ml-28 {
+            margin-left: 20px;
+        }
+        
+        #project .flex.justify-center {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+
+        #Contact {
+            left: 0;
+            margin-left: 0;
+            padding: 20px;
+        }
+        
+        #Contact > div:first-child,
+        #Contact > div:nth-child(2) {
+            right: 0;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        #Contact p,
+        #Contact h4 {
+            right: 0 !important;
+            top: 0 !important;
+        }
+        
+        #Contact .flex.gap-3 {
+            top: 20px !important;
+            right: 0 !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+     
+        #home .text-3xl h1,
+        #home .text-3xl p {
+            font-size: 1.5rem;
+        }
+        
+        #home .px-40 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        #home .pt-40 {
+            padding-top: 20px;
+        }
+
+        .profile-img {
+            width: 200px !important;
+            height: 200px !important;
+        }
+
+        #about {
+            margin-top: 100px;
+        }
+        
+        #about p {
+            font-size: 0.9rem;
+        }
+        
+        #skills {
+            margin-top: 100px;
+        }
+        
+        #skills h1 {
+            font-size: 1.5rem;
+        }
+        
+        #skills img {
+            width: 100px !important;
+            height: 100px !important;
+        }
+        
+        #project {
+            margin-top: 100px;
+        }
+        
+        #project img {
+            height: 150px !important;
+        }
+        
+        #Contact .bg-gray-800 {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #home .text-3xl h1,
+        #home .text-3xl p {
+            font-size: 1.2rem;
+        }
+        
+        #home .text-lg {
+            font-size: 0.9rem;
+        }
+        .profile-img {
+            width: 150px !important;
+            height: 150px !important;
+        }
+        
+        #skills img {
+            width: 80px !important;
+            height: 80px !important;
+        }
+        
+        #about p {
+            font-size: 0.8rem;
+        }
+        
+        #Contact .bg-gray-800 {
+            padding: 20px;
+            width: 100%;
+        }
+        
+        #Contact input,
+        #Contact textarea {
+            width: 100%;
+        }
+    }
+</style>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "4NaoFH3KXZykrOKK9",
+      });
+   })();
+</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-full h-screen bg-gradient-to-br from-[#0b0f19] via-[#14243c] to-[#0b0f19]">
+    <script src="portfo.js" defer></script>
+
+    <nav class="shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
+
+            <h1
+                class="text-2xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text text-blue-600">
+                Lakshmi S.</h1>
+
+
+            <ul
+                class="hidden md:flex space-x-8 text-lg bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text font-bold">
+                <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+                <li><a href="#project" class="hover:text-blue-600">Projects</a></li>
+                <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+                <li><a href="#Contact" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+
+
+            <button id="menu-btn"
+                class="md:hidden text-3xl focus:outline-none bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text text-blue-600">
+                ☰
+            </button>
+        </div>
+
+
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text text-blue-600 shadow-md">
+            <ul class="flex flex-col space-y-4 p-4 text-lg">
+                <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+                <li><a href="#project" class="hover:text-blue-600">Projects</a></li>
+                <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+                <li><a href="#Contact" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="flex justify-center my-11">
+
+
+            <div class="flex justify-center m-5 mt-40 pr-24">
+                <div class="flex-1 flex justify-center animate-fadeIn" style="animation-delay: 0.3s;">
+                    <div class="profile-img relative w-64 h-64 md:w-80 md:h-80">
+                        <img class="w-full h-full object-cover rounded-tl-[40%] rounded-br-[40%]" src="/img.jpg"
+                            alt="Lakshmi S" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-3xl px-40 pt-40">
+                <h1 class="text-white text-3xl font-bold flex flex-col ">Hi I'm
+
+                    <span class="text-blue-600 text-3xl "> Lakshmi S</span>
+                </h1>
+                <p class="text-blue-500 font-bold text-3xl px-2 pt-8">A Full-Stack Developer</p>
+                <p class="text-lg text-white px-2 ">This is my official Portfolio to show all details and work
+                    experience</p>
+  <div class="flex gap-2 pt-2 pl-2 h-10">
+  <a href="https://www.linkedin.com/in/lakshmi-s-a55359340?utm_source=share&utm_content=profile&utm_medium=member_android">
+    <img src="/link.png" class="size-7 cursor-pointer transition-transform duration-300 ease-out hover:scale-125">
+  </a>
+  <img src="/git.png" class="size-7 cursor-pointer transition-transform duration-300 ease-out hover:scale-125">
+  <a href="https://www.instagram.com/lakshmie._?igsh=amRubjBoZDU3eDVl">
+    <img src="/social_15528043.png" class="size-7 cursor-pointer transition-transform duration-300 ease-out hover:scale-125">
+  </a>
+</div>
+
+            </div>
+        </div>
+        </section>
+        
+
+
+        <section id="about" class="mt-56">
+            <div class="pt-11 ml-10">
+                <h1 class="justify-center font-bold text-white ">About Me</h1>
+<div class="w-10 h-1 bg-blue-500"></div><br>
+                        <p class=" para text-white font-semibold font size-50 ">I am an aspiring Frontend Developer focused on building clean, responsive, and user-centered interfaces. I work with HTML, CSS, JavaScript, and Tailwind CSS to create modern layouts and interactive components.<br> My current goal is to strengthen my problem-solving abilities, deepen my understanding of JavaScript fundamentals, and learn advanced concepts that will help me build fully functional web applications.<br>
+I am passionate about writing structured code, improving performance, and creating smooth UI experiences. Every project I build helps me refine my skills, understand real-world development workflows, and grow toward becoming a professional developer. I am actively learning frameworks, improving my design sense, and preparing myself for opportunities where I can contribute to meaningful projects and collaborate with experienced engineers.<br>
+I believe in continuous learning, consistent practice, and building a strong foundation—qualities that drive me as I move forward in my journey to becoming a full-stack developer.</p>
+
+            </div>
+        </section>
+
+    <section id="skills" class="mt-52">
+<h1 class=" text-white font-semibold text-3xl ml-96 py-5">Skills</h1>
+        <div class="w-16 h-1 bg-blue-500 ml-96"></div>
+    <div class="pt-[30px] flex justify-center flex-wrap gap-6">
+        
+        <img src="/htmlicon.png" class="w-[150px] h-[150px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer">
+        <img src="/tailwind-css-100.png" class="w-[150px] h-[150px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer">
+        <img src="/javascript.png" class="w-[150px] h-[150px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer">
+    </div>
+
+    <div class="ak pt-[30px] flex justify-center flex-wrap gap-6">
+        <img src="/css1icon.png" class="w-[150px] h-[150px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer">
+        <img src="/ReactIcon.png" class="w-[150px] h-[150px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer">
+        <img src="/redux.png" class="w-[150px] h-[150px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer">
+    </div>
+
+</section>
+
+
+<section id="project" class="mt-52">
+   <div class=" ml-28 pb-12">
+        <h1 class="text-white font-semibold text-3xl">Projects</h1>
+        <div class="w-16 h-1 bg-blue-500"></div>
+    </div>
+<div class="flex justify-center gap-x-16  mx-3  ">
+<div >
+<img src="nav.png" class=" rounded-lg h-[200px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer">
+<span class="text-white">Navbar</span>
+</div>
+
+<div class="mb-5">
+<img src="clone.png "class=" rounded-lg h-[200px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer" >
+<span class="text-white w-100">Clone App</span> 
+</div>
+</div>
+
+
+<div class="flex justify-center">
+
+<div class="flex" >
+<img src="bank.png" class=" rounded-lg h-[200px] object-contain transition-transform duration-300 ease-out hover:scale-125 cursor-pointer">
+</div>
+</div>
+<span class="text-white flex justify-center">Bank Account</span>
+
+</section>
+
+<section id="Contact" class=" relative left-56 ml-96 ">
+
+<div class="relative right-1/2 bottom-4">
+
+<p class="text-white text-xl font-bold relative right-10 top-56">Submit the form and I'll reach out to you soon</p>
+    <p class="text-white relative top-60 right-10">Feel free to connect..</p>
+<div class="flex gap-3 relative top-72 right-10">
+<img src="/mail.png">
+<h4 class="text-white">Email</h4>
+<br>
+<p class="text-white relative top-10 right-24">lakshmistla17@gmail.com
+</div>
+</div>
+<br>
+
+<div class="relative right-1/2 bottom-4"> 
+<div class="flex gap-3 relative top-80 right-10">
+<img src="/location.png">
+<h4 class="text-white " >Location</h4><br>
+<p class="text-white relative top-10 right-28">Kerala,India</p>
+</div>
+</div>
+
+
+<div>
+    <h1 class="text-white font-semibold text-3xl">Get in touch</h1>
+     <div class="w-16 h-1 bg-blue-500"></div>
+   
+</div>
+<div class="bg-gray-800 rounded-2xl p-8 border border-gray-700 w-96 mt-10">
+
+<form onsubmit="sendmail(event); return false;">
+    <label for="name" class="text-white">Name</label><br>
+    <input type="text" id="name" placeholder="Enter your Name" class="w-250 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition">
+    <br><br>
+    
+    <label for="email" class="text-white">Email</label><br>
+    <input type="email" id="email" placeholder="Enter your email" class="w-250 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition">
+    <br><br>
+    
+    <label class="text-white">Message</label><br>
+    <textarea id="message" placeholder="Type your message" class="w-250 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition"></textarea>
+    <br><br>
+    
+    <button type="submit" class="bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-cyan-500 transition duration-300">Send your message</button>
+</form>
+</div>
+</body>
+
+</html>
